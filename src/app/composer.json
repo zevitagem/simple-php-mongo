@@ -3,6 +3,7 @@
         "mongodb/mongodb": "^1.9.0-alpha1"
     },
     "autoload": {
-        "psr-4": {"CheckoutFees\\Core\\": "core/"}
+        "psr-4": {"CheckoutFees\\Core\\": "core/"},
+        "files": ["core/Helpers/Functions.php"]
     }
 }

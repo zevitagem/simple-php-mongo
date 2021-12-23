@@ -21,6 +21,9 @@ RUN apt-get install -y \
         zip
 RUN apt-get install -y
 
+RUN apt-get install -y \
+        autoconf pkg-config libssl-dev
+
 RUN pecl install mongodb && docker-php-ext-enable mongodb
 RUN echo "extension=mongodb.so" >> /usr/local/etc/php/php.ini
 

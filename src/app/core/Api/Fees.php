@@ -10,14 +10,19 @@ class Fees
 
     public function __construct()
     {
-        $mongo          = new MongoManager();
-        $mongo::connect();
-        $this->database = $mongo::getConnection();
+        $this->database          = new MongoManager();
+        $this->database::connect();
     }
 
     public function index()
     {
-        var_dump($this->database);
+        //dd($this->database->getConnection()->listDatabases());
+
+        $collection = $this->database::getCollection();
+
+        $result = $collection->insertOne(['name' => 'Hinterland', 'brewery' => 'BrewDog']);
+
+        echo "Inserted with Object ID '{$result->getInsertedId()}'";
     }
 
     public function add()
