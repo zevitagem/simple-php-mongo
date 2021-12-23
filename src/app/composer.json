@@ -3,6 +3,6 @@
         "mongodb/mongodb": "^1.9.0-alpha1"
     },
     "autoload": {
-        "psr-4": {"Core\\CheckoutFees\\": "core/"}
+        "psr-4": {"CheckoutFees\\Core\\": "core/"}
     }
 }

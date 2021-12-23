@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\CheckoutFees;
+namespace CheckoutFees\Core;
 
 class MongoManager
 {
