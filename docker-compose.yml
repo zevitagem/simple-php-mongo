@@ -18,6 +18,7 @@ services:
               target: /var/www/html
               
     mongo-fees-checkout:
+        container_name: mongo-fees-checkout
         image: mongo
         restart: always
         networks:
@@ -29,6 +30,7 @@ services:
             - ./storage/mongo:/data/db
             
     mongo-express-fees-checkout:
+        container_name: mongo-express-fees-checkout
         image: mongo-express
         restart: always
         networks:
@@ -45,3 +47,4 @@ volumes:
     src:
 networks:
   checkout-network:
+    external: true
